@@ -1,9 +1,9 @@
 import { Router } from 'express'
 
-const router = Router()
+const genericRoutes = Router()
 
-router.get('/', (req, res) => {
+genericRoutes.get('/', (req, res) => {
   return res.status(201).send()
 })
 
-export { router }
+export { genericRoutes }

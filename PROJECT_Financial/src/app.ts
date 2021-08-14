@@ -1,9 +1,11 @@
 import express from 'express'
-import { router } from './routes'
+import { userRoutes } from './modules/users/UserRoutes'
+import { genericRoutes } from './routes'
 
 const app = express()
 
 app.use(express.json())
-app.use(router)
+app.use(genericRoutes)
+app.use(userRoutes)
 
 export { app }
